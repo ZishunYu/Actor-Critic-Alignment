@@ -1,0 +1,5 @@
+beta: 3
+target_entropy_coef: 0.5
+squashed_normal_policy: False
+interpolation: [1., 200, 0.5]
+n_trajs: 0

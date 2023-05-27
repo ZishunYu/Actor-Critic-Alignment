@@ -1,0 +1,3 @@
+alpha: 30
+squashed_normal_policy: True
+target_entropy_coef: 1.0
