@@ -75,6 +75,8 @@ def main(args):
                    eval_env=eval_env,
                    n_steps=100000,
                    n_steps_per_epoch=1000,
+                   update_interval=1,
+                   update_start_step=0,
                    save_interval=100,
                    experiment_name=f"ACA/{args.dataset}/{args.seed}/exp",
                    with_timestamp=False,)

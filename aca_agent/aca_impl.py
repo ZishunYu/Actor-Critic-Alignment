@@ -166,15 +166,7 @@ class ACAImpl(DDPGBaseImpl):
         self._temp_optim = self._temp_optim_factory.create(
             self._log_temp.parameters(), lr=self._temp_learning_rate
         )
-
-    def compute_actor_loss(self, batch: TorchMiniBatch) -> torch.Tensor:
-        assert self._policy is not None
-        assert self._log_temp is not None
-        assert self._q_func is not None
-        action, log_prob = self._policy.sample_with_log_prob(batch.observations)
-        entropy = self._log_temp().exp() * log_prob
-        q_t = self._q_func(batch.observations, action, "min")
-        return (entropy - q_t).mean()
+        
 
     @train_api
     @torch_api()
