@@ -34,10 +34,25 @@ Code of our paper [Actor-Critic Alignment for Offline-to-Online Reinforcement Le
    python3 run_aca.py --dataset hopper-medium-v2 --seed 1
    ~~~
 
+
+## Troubleshooting
+1. MuJoCo installation troubleshooting, see [MuJoCo official git page](https://github.com/openai/mujoco-py#troubleshooting)
+2. ```ImportError: libpython3.7m.so.1.0: cannot open shared object file: No such file or directory```, try setting the lib path before running experiment
+    ~~~
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/PATH/TO/CONDA/envs/ACA/lib
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/YOUR_USER_NAME/.mujoco/mujoco200/bin
+    ~~~
+3. ```OSError: /some/path/mujoco/libmujoco200.so: undefined symbol: __glewBindBuffer```, try install libglfw3 and libglew2.0 by
+    ~~~
+    conda install -c menpo glfw3
+    conda install -c conda-forge glew==2.0.0
+    ~~~
+
 ## Reference
 <div id="user-content-toc">
   <ul>
-
+  <span style="font-weight:normal">
+  
 ~~~
 @InProceedings{pmlr-v202-yu23k,
   title = 	 {Actor-Critic Alignment for Offline-to-Online Reinforcement Learning},
@@ -55,22 +70,7 @@ Code of our paper [Actor-Critic Alignment for Offline-to-Online Reinforcement Le
 }
 ~~~
 
+  </span>
   </ul>
 </div>
-
-
-
-## Troubleshooting
-1. MuJoCo installation troubleshooting, see [MuJoCo official git page](https://github.com/openai/mujoco-py#troubleshooting)
-2. ```ImportError: libpython3.7m.so.1.0: cannot open shared object file: No such file or directory```, try setting the lib path before running experiment
-    ~~~
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/PATH/TO/CONDA/envs/ACA/lib
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/YOUR_USER_NAME/.mujoco/mujoco200/bin
-    ~~~
-3. ```OSError: /some/path/mujoco/libmujoco200.so: undefined symbol: __glewBindBuffer```, try install libglfw3 and libglew2.0 by
-    ~~~
-    conda install -c menpo glfw3
-    conda install -c conda-forge glew==2.0.0
-    ~~~
-
 
