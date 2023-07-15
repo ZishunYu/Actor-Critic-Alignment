@@ -49,10 +49,6 @@ Code of our paper [Actor-Critic Alignment for Offline-to-Online Reinforcement Le
     ~~~
 
 ## Reference
-<div id="user-content-toc">
-  <ul>
-  <span style="font-weight:normal">
-  
 ~~~
 @InProceedings{pmlr-v202-yu23k,
   title = 	 {Actor-Critic Alignment for Offline-to-Online Reinforcement Learning},
@@ -69,8 +65,4 @@ Code of our paper [Actor-Critic Alignment for Offline-to-Online Reinforcement Le
   url = 	 {https://proceedings.mlr.press/v202/yu23k.html},
 }
 ~~~
-
-  </span>
-  </ul>
-</div>
 
