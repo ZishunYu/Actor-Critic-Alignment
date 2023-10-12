@@ -1,6 +1,6 @@
 # Actor-Critic Alignment (ACA)
 
-Code of our paper [Actor-Critic Alignment for Offline-to-Online Reinforcement Learning](https://proceedings.mlr.press/v202/yu23k.html)
+Code of our ICML`23 paper: [Actor-Critic Alignment for Offline-to-Online Reinforcement Learning](https://proceedings.mlr.press/v202/yu23k.html)
 
 ## Installation
 
